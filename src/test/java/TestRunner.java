@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 
 @CucumberOptions(
-        features = "src/test/feature",
+        features = "src/test/",
         glue = {"org/QaPracticalChallange/stepDefinition"},
         tags = {"@flightBooking"},
         format = { "json:target/QaPracticalChallange.json", "pretty",
