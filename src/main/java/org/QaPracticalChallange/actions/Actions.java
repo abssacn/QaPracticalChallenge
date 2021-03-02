@@ -4,8 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.QaPracticalChallange.utils.ConfigFileReader;
 import org.QaPracticalChallange.utils.PageObjects;
 import org.QaPracticalChallange.utils.SeleniumDriverMethods;
-import org.QaPracticalChallange.utils.SeleniumDrivers;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -19,7 +17,7 @@ public final class Actions extends SeleniumDriverMethods {
 
     private static ConfigFileReader configFileReader = new ConfigFileReader();
 
-    public static void Login(String username, String password) throws Throwable{
+    public static void Login(String username, String password) {
         try {
             driver.get(configFileReader.getPropertyValue("url"));
             driver.findElement(By.xpath(PageObjects.txt_username)).sendKeys(username);
@@ -30,10 +28,9 @@ public final class Actions extends SeleniumDriverMethods {
             log.error(e.getMessage());
         }
     }
-    public static void AddProducts() throws Throwable{
-
-        driver.findElement(By.xpath(PageObjects.btn_addprod1)).click();
-        driver.findElement(By.xpath(PageObjects.btn_addprod2)).click();
+    public static void AddProducts() {
+        driver.findElement(By.xpath(PageObjects.btn_addBackpack)).click();
+        driver.findElement(By.xpath(PageObjects.btn_addOnsie)).click();
     }
 
     public static void verifyValueAdded() {
