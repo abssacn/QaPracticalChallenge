@@ -1,5 +1,3 @@
-package org.QaPracticalChallange;
-
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
@@ -7,7 +5,6 @@ import cucumber.api.testng.TestNGCucumberRunner;
 import org.QaPracticalChallange.utils.FileReaderWriteManager;
 import org.QaPracticalChallange.utils.SeleniumDriverMethods;
 import org.junit.AfterClass;
-import org.junit.runner.RunWith;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,7 +12,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 
 @CucumberOptions(
-        features = "src/test/resources/features",
+        features = "src/test/feature",
         glue = {"org/QaPracticalChallange/stepDefinition"},
         tags = {"@flightBooking"},
         format = { "json:target/QaPracticalChallange.json", "pretty",

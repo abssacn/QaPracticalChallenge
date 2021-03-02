@@ -11,9 +11,11 @@ public class PageObjects {
     public static String pg_home() {
     return "//div[@id='inventory_filter_container']"; }
 
-    public static String btn_addprod1 = "//div[@id='inventory_container']/div/div/div[3]/button";
+    public static String btn_addBackpack = "//div[text()='Sauce Labs Backpack']//following::button[1]";
 
-    public static String btn_addprod2 = "//div[@id='inventory_container']/div/div[5]/div[3]/button";
+    public static String btn_addBoltShirt = "//div[text()='Sauce Labs Bolt T-Shirt']//following::button[1]";
+
+    public static String btn_addOnsie = "//div[text()='Sauce Labs Onesie']//following::button[1]";
 
     public static String btn_verifyPro1 = "//a[@id='item_4_title_link']/div";
 

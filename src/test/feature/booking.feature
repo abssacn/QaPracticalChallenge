@@ -2,7 +2,7 @@
 
 Feature: Checkout booking functionality
 
-  Scenario Outline: Login to the system
+  Scenario Outline: Products booking
     Given the customer is on swagLabs landing page
     When customer enters their login credentials <userName> and <password>
     And a customer add two products to your shopping cart
